@@ -3,14 +3,14 @@
 ;****************************************************************
 
 list p=18f45k22		
-#include 	<p18f45k22.inc>					; 納入定義檔Include file located at defult directory	
-EXTERN	InitLCD, putcLCD, Send_Cmd, L1homeLCD, L2homeLCD, clrLCD, LLhomeLCD
+#include 		<p18f45k22.inc>				; 納入定義檔Include file located at defult directory	
+EXTERN			InitLCD, putcLCD, Send_Cmd, L1homeLCD, L2homeLCD, clrLCD, LLhomeLCD
 ;
 ; program start
-RX_Temp			EQU	0x20
-VAL_US			equ	.147					; 1ms 延遲數值。
-VAL_MS			equ	.100
-VAL_S			equ	.10
+RX_Temp			EQU		0x20
+VAL_US			equ		.147			; 1ms 延遲數值。
+VAL_MS			equ		.100
+VAL_S			equ		.10
 			CBLOCK		0x00			; 由暫存器位址0x00開始宣告保留變數的位址
 			C_Hold_Delay				; 類比訊號採樣保持時間延遲計數暫存器
 			TxD_Flag				; 資料傳輸延遲時間旗標
