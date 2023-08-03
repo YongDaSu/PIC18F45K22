@@ -7,10 +7,10 @@ list p=18f45k22
 EXTERN	InitLCD, putcLCD, Send_Cmd, L1homeLCD, L2homeLCD, clrLCD, LLhomeLCD
 ;
 ; program start
-RX_Temp		EQU	0x20
-VAL_US		equ	.147					; 1ms 延遲數值。
-VAL_MS		equ	.100
-VAL_S		equ	.10
+RX_Temp			EQU	0x20
+VAL_US			equ	.147					; 1ms 延遲數值。
+VAL_MS			equ	.100
+VAL_S			equ	.10
 			CBLOCK		0x00			; 由暫存器位址0x00開始宣告保留變數的位址
 			C_Hold_Delay				; 類比訊號採樣保持時間延遲計數暫存器
 			TxD_Flag				; 資料傳輸延遲時間旗標
@@ -677,7 +677,8 @@ end_check:
 			call		putcLCD
 			movf		BBB,W
 			call		putcLCD
-			movlw		a':'
+			;movlw		a':'
+			movlw		':'
 			call		putcLCD
 			movf		CCC,W
 			call		putcLCD
